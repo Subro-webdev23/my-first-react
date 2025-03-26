@@ -7,6 +7,8 @@ import User from './User';
 import { Suspense } from 'react';
 import Friends from './Friends';
 import Posts from './Posts';
+import CounterApp from './CounterApp';
+import HideShow from './HideShow';
 
 const fetchUser = fetch('https://jsonplaceholder.typicode.com/users')
   .then(res => res.json())
@@ -45,7 +47,8 @@ function App() {
         </a>
       </div>
       <h1>React</h1>
-
+      <HideShow></HideShow>
+      <CounterApp></CounterApp>
       <Suspense fallback={<h3>Loading...</h3>}>
         <User fetchUser={fetchUser}></User>
       </Suspense>
